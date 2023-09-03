@@ -1,0 +1,44 @@
+.container{
+    margin: 15px;
+}
+
+.search{
+    margin-right: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 8px 5px;
+}
+
+.btnAgregar{
+    background-color: rgb(0, 161, 21);
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: rgb(249, 249, 249);
+    cursor: pointer;
+}
+
+.btnAgregar:hover{
+    background-color: white;
+    color: rgb(0, 161, 21);
+    animation: resplandor 2s  infinite;
+}
+
+.search:focus{
+    animation: resplandor 2s  infinite;
+}
+
+
+@keyframes resplandor {
+    0% {
+      box-shadow: 0 0 30px rgba(225, 255, 0, 0.987);
+    }
+    5% {
+      box-shadow: 0 0 30px rgb(0, 247, 255);
+    }
+    75% {
+      box-shadow: 0 0 30px rgb(255, 0, 251);
+    }
+    100% {
+      box-shadow: 0 0 30px #88ff00;
+    }
+  }

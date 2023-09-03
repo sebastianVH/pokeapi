@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.enter{
+  background-color: aqua;
+  height: 60vh;
+}
+
+.titleApp{
+  color: white;
+  font-size: 2.7rem;
+}

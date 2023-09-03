@@ -1,3 +1,7 @@
+html{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +9,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./assets/img/High_resolution_wallpaper_background_ID_77700561785.webp);
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: contain;
 }
 
 code {
