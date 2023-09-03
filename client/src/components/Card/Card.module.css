@@ -1,0 +1,32 @@
+.cardContainer{
+    margin-top: 25px;
+    font-size: 20px;
+    border: 2px solid rgb(129, 129, 129);
+    border-radius: 15px;
+    /* background: linear-gradient(90deg, #c800ff, #ffffff, #001eff); */
+    background-color: rgba(0, 0, 0, 0.849);
+    background-size: 200% 200%;
+    height: 300px;
+    width: 280px;
+}
+
+.textDetail{
+    /* animation: resplandor 4s ease-in-out infinite; */
+    color: white;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    display: block;
+    text-transform: capitalize;
+}
+
+.imgPokemon{
+    height: 160px;
+    aspect-ratio: 4/3;
+}
+
+
+a{
+    text-decoration: none;
+}

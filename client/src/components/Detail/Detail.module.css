@@ -1,0 +1,62 @@
+.textStyle{
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+.titleStyle{
+    color: rgb(255, 255, 255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    font-size: 60px;
+    text-transform: capitalize;
+    padding: 0;
+}
+
+.cardStyle{
+    background-color: rgba(241, 86, 80, 0.826);
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgb(182, 182, 182);
+    text-shadow: 2px 2px 2px black;
+    margin-top: 25px;
+    padding: 0px 10px 15px 10px;
+}
+
+.detailImage {
+    height: 350px;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
+    margin: 5px;
+    }
+
+.detailIcon {
+    aspect-ratio: 1/1;
+    height: 30px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.typesContainer{
+    display: inline-block;
+    gap: 5px;
+}
+
+.containerImg{
+    border: 5px solid transparent; /* Establece un borde transparente */
+    border-image: linear-gradient(to right, gold, white, gold);
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, gold, white, gold);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to left, rgb(5, 143, 0), rgb(136, 135, 135), rgb(5,143,0));
+}

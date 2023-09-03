@@ -1,0 +1,45 @@
+
+
+.Login{
+    padding-top: 20vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex-direction: column;
+    text-decoration: none;
+    height: 50vh;
+    margin-left: 100px;
+}
+
+.pokeball{
+    height: 50vh;
+    animation: rotate-pokeball 1.5s infinite;
+    transform: rotate(15deg);
+    padding: 0px 0px;
+}
+
+.textEntrar{
+    color: aliceblue;
+    font-size: 6rem;
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
+    text-shadow: 5px 5px 6px black;
+    vertical-align: middle;
+    line-height: normal;
+    text-align: center;
+    padding-left: 35px;
+}
+
+@keyframes rotate-pokeball {
+    0%,100%{
+        transform: rotate(16deg);
+    }
+    25%{
+        transform: rotate(6deg);
+    }
+    50%{
+        transform: rotate(16deg);
+    }
+    75%{
+        transform: rotate(26deg);
+    }
+}
