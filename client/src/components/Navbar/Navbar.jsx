@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react"
 import myStyle from "../Navbar/Navbar.module.css"
 import SearchBar from "../SearchBar/Searchbar"
-import axios from 'axios'
+import { getTypes,orderByName  } from "../../redux/actions"
+import { useDispatch, useSelector } from "react-redux"
 
-export default function Navbar({search}){
 
-    const[types,setTypes] = useState([])
+export default function Navbar(){
 
-    const getTypes = async () => {
-        const allTypes = await axios("http://localhost:3001/types")
-        setTypes(allTypes.data);
-    }
+    const types = useSelector( state => state.allTypes)
+    const dispatch = useDispatch()
 
     useEffect(()=>{
-         getTypes()
+        dispatch(getTypes())
     },[])
+
+    const handleOrder = (e) => {
+        dispatch(orderByName(e.target.value))
+    }
 
     return <div>
                 <div className={myStyle.divSelectores}>
@@ -28,10 +30,12 @@ export default function Navbar({search}){
                         </select>
                     </div>
                     <div>
-                        <label className={myStyle.label} htmlFor="">Order By Alphabetic</label>
-                        <select className={myStyle.selector}>
+                        <label className={myStyle.label} htmlFor="">Order By Name</label>
+                        <select className={myStyle.selector} onChange={handleOrder}>
                             {/* 
                             Hacer una peticion para que ordene por Orden */}
+                            
+                            <option value="">No Order</option>
                             <option value="A">Asc</option>
                             <option value="B">Desc</option>
                         </select>
@@ -39,19 +43,10 @@ export default function Navbar({search}){
                     <div>
                     <label className={myStyle.label} htmlFor="">Filter By Type</label>
                         <select className={myStyle.selector}>
-                            {     
-                            /* 
-                            Mandar filtro para que ordene por tipo> 
-                            
-                            <option value="">All</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Genderless">Genderless</option>
-                            <option value="unknown">Unknown</option> */}
                             <option value="All">All</option>
-                            {types.map(type => {
-                                return <option key={type.id} value={type.name}>{type.name}</option>
-                                })}
+                            {types && types.map(type => {
+                                return <option key={type.id} value={type.name}> {type.name} </option>
+                                })} 
                         </select>
                     </div>
                     <div>

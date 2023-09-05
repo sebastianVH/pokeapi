@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import styles from './Detail.module.css'
 import { useSelector } from "react-redux"
-//import { types } from "pg"
+import unknown from "../../assets/img/unknown.png"
 
 
 
@@ -27,13 +27,13 @@ export default function Detail(){
                     <h1 className={styles.titleStyle}>{detail.name}</h1>
                     <div className={styles.typesContainer}>
                         {detail.types?.map(type =>{
-                        const image = require (`../../assets/img/img-types/${type.name}.png`)
+                        const image = require (`../../assets/img/img-types/${type.name}.png`) 
                         return <img className={styles.detailIcon} src={image} alt={type.name} title={type.name} />
                         })}
                     </div>
                 </div>
                 <div className={styles.containerImg}>
-                    <img className={styles.detailImage} src={detail.image} alt={detail.name} />
+                    <img className={styles.detailImage} src={ detail.image || unknown} alt={detail.name} />
                 </div>
                 <h4 className={styles.textStyle}>Hp: {detail.hp}</h4>
                 <h4 className={styles.textStyle}>Attack: {detail.attack}</h4>

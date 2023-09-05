@@ -1,2 +1,6 @@
 export const SET_POKEMONS = "SET_POKEMONS"
-export const SEARCH_POKEMON = "SEARCH_POKEMON"
+export const GET_TYPES = "GET_TYPES"
+export const FILTER_BY_ORIGIN = "FILTER_BY_ORIGIN"
+export const FILTER_BY_TYPE = "FILTER_BY_TYPE"
+export const ORDER_BY_NAME = "ORDER_BY_NAME"
+export const ORDER_BY_ATTACK = "ORDER_BY_ATTACK"

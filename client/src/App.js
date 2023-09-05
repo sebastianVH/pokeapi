@@ -7,7 +7,7 @@ import Pokemons from './components/PokemonsList/Pokemons';
 import Detail from './components/Detail/Detail';
 import Navbar from './components/Navbar/Navbar';
 import { useDispatch } from 'react-redux';
-import { setPokemons } from './redux/actions';
+import { setPokemons,getTypes } from './redux/actions';
 const BASE_URL = "http://localhost:3001/pokemons/"
 
 function App() {

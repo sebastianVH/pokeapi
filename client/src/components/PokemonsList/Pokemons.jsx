@@ -1,36 +1,32 @@
 import { useEffect, useState } from "react"
-import Navbar from "../Navbar/Navbar"
-import {useDispatch, useSelector} from "react-redux"
-import { setPokemons } from "../../redux/actions"
+import { useDispatch, useSelector} from "react-redux"
 import Card from "../Card/Card"
-import axios from "axios"
 import styles from "./Pokemons.module.css"
-import { SET_POKEMONS } from "../../redux/actionsTypes"
+import { setPokemons } from "../../redux/actions"
+
 
 export default function Pokemons(){
 
-    //const pokemons  = useSelector((state)=>state.allPokemons)
-    const pokemons = useSelector(state => state.allPokemons)
+    const pokemons  = useSelector((state)=>state.allPokemons)
+    //const pokemons = useSelector(state => [...state.apiPokemons,...state.dataBasePokemons])
     const [page,setPage] = useState(0)
     const [pageSize,setPageSize] = useState(12)
     const [displayPokemons, setDisplayPokemons] = useState([])
-    const dispatch = useDispatch()
+
+    
 
     useEffect(()=>{
         const pokemonsToDisplay = pokemons.slice(page,pageSize)
         setDisplayPokemons(pokemonsToDisplay)
-        
-    },[page,pageSize])
+    },[page,pageSize,pokemons])
+
 
     const handlePage = (handler) => {
-        console.log(handler);
        switch(handler){
         case "next":
             if (page < Math.ceil(pokemons.length / pageSize)) {
                 setPage(page + 12);
-                setPageSize(pageSize + 11)
-                console.log(page);
-                console.log(pageSize);
+                setPageSize(pageSize + 11);
             }
             break
         case "prev":
