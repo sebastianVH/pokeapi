@@ -18,7 +18,7 @@ export default function Pokemons({pokemons,types}){
 
 
     const handlePage = (handler) => {
-       switch(handler){
+        switch(handler){
         case "next":
             if (page < Math.ceil(pokemons.length / pageSize)) {
                 setPage(page + 12);

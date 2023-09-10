@@ -16,7 +16,6 @@ const getById = async (req,res) => {
 
         if (databasePokemon) return res.status(200).json(databasePokemon) 
 
-
         const newPokemon = await constructPokemon(idP)
         return res.status(200).json(newPokemon)   
     } catch (error) {

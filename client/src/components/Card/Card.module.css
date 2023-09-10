@@ -31,6 +31,7 @@
 .imgPokemon{
     height: 160px;
     aspect-ratio: 4/3;
+    object-fit: contain;
 }
 
 a{
@@ -44,7 +45,8 @@ a{
 }
 
 .detailIcon {
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
+    object-fit: contain;
     height: 30px;
 }
 

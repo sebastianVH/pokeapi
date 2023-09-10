@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import styles from "./Searchbar.module.css"
-import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate} from "react-router-dom";
 import axios from "axios";
 import pikachu from "../../assets/img/pikachu-face.png"
 import pokeball from "../../assets/img/pokeball.png"
@@ -31,6 +30,10 @@ export default function SearchBar() {
       }
    }
 
+   const handleForm = () => {
+      redirect('/form')
+   }
+
    return (
       <div className={styles.container}>
             <Link to={"/home"}>
@@ -41,7 +44,7 @@ export default function SearchBar() {
             </Link>
          <div>
             <Link to={'/form'}>
-                  <button className={styles.buttonForm}>Create your own Pokémon</button>
+                  <button onClick={handleForm} className={styles.buttonForm}>Create your own Pokémon</button>
             </Link>
          </div>
          <div className={styles.containerField}>

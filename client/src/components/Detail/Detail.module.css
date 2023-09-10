@@ -1,23 +1,23 @@
 .textStyle{
+    font-size: 30px;
     display: inline-flex;
     color: rgb(255, 255, 255);
     word-wrap: break-word;
     overflow-wrap: break-word;
     margin: 0px;
     font-family: 'pokeFont';
-    font-weight: 100;
+    font-weight: 50;
 }
 
 .titleStyle{
     color: rgb(255, 255, 255);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     font-size: 60px;
     text-transform: capitalize;
     padding: 0 ;
     font-family: 'pokeFont';
     font-weight: 300;
-    -webkit-text-stroke: 1px solid black;
+    
 }
 
 .cardStyle{
