@@ -1,5 +1,12 @@
 .container{
-    margin: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 15px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .search{
@@ -41,4 +48,32 @@
     100% {
       box-shadow: 0 0 30px #88ff00;
     }
+  }
+
+  .label{
+    color: white;
+  }
+
+  .containerField{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title{
+    font-family: 'pokeFont';
+    margin: 0 auto;
+    -webkit-text-stroke: 0.5px rgb(2, 2, 171);
+    -webkit-text-fill-color: rgb(250, 242, 0);
+  }
+
+  .pokeball{
+    width: 43px;
+  }
+
+  .titleBar{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    align-content: center;
   }

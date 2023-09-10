@@ -10,6 +10,11 @@
     width: 280px;
 }
 
+.cardContainer:hover{
+    cursor: pointer;
+    background-color: rgba(134, 134, 134, 0.603);
+}
+
 .textDetail{
     /* animation: resplandor 4s ease-in-out infinite; */
     color: white;
@@ -26,7 +31,17 @@
     aspect-ratio: 4/3;
 }
 
-
 a{
     text-decoration: none;
+}
+
+.typesContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.detailIcon {
+    aspect-ratio: 1/1;
+    height: 30px;
 }

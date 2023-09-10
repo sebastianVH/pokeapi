@@ -1,14 +1,14 @@
 
 
 .Login{
-    padding-top: 20vh;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    flex-direction: column;
-    text-decoration: none;
+    display: grid;
+    align-items: center;
+    background-image: url(../../assets/img/pngwing.com.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50vh;
     height: 50vh;
-    margin-left: 100px;
+    text-align: center;
 }
 
 .pokeball{
@@ -19,14 +19,11 @@
 }
 
 .textEntrar{
+    margin: 0px 0px;
     color: aliceblue;
-    font-size: 6rem;
-    -webkit-text-stroke: 3px rgb(0, 0, 0);
-    text-shadow: 5px 5px 6px black;
-    vertical-align: middle;
-    line-height: normal;
-    text-align: center;
-    padding-left: 35px;
+    font-size: 15vh;
+    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+    text-shadow: 5px 5px 4px black;
 }
 
 @keyframes rotate-pokeball {
@@ -42,4 +39,29 @@
     75%{
         transform: rotate(26deg);
     }
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    height: 100%;
+}
+
+.title{
+    font-family: 'pokeFont';
+    font-size: 8rem;
+    margin: 0 0;
+    padding: 0 0;
+    text-align: center;
+    -webkit-text-stroke: 1.5px rgb(2, 2, 171);
+    -webkit-text-fill-color: rgb(250, 242, 0);
+}
+
+.containerPrincipal{
+    display: flex;
+    justify-content: center;
 }

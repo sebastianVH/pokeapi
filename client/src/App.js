@@ -6,27 +6,32 @@ import Login from './components/Login/Login';
 import Pokemons from './components/PokemonsList/Pokemons';
 import Detail from './components/Detail/Detail';
 import Navbar from './components/Navbar/Navbar';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { setPokemons,getTypes } from './redux/actions';
-const BASE_URL = "http://localhost:3001/pokemons/"
+import Form from './components/Form/Form';
+import SearchBar from './components/SearchBar/Searchbar';
 
 function App() {
 
-  const dispatch = useDispatch()
-  const navigate = useNavigate() 
+  
   const {pathname} = useLocation()
+  const dispatch = useDispatch()
+  const pokemons = useSelector(state => state.allPokemons)
+  const types = useSelector( state => state.allTypes)
+
 
   useEffect(()=>{
     dispatch(setPokemons())
-  },[])
-
+    dispatch(getTypes())
+    },[])
 
   return (
     <div className="App">
-        {pathname !== "/" && <Navbar/>}
+        {pathname !== "/" && <SearchBar types = {types}/>}
         <Routes>
           <Route path='/' element={<Login/>}/>
-          <Route path='/home' element={<Pokemons />}/>
+          <Route path='/form' element={<Form types={types}/> }/>
+          <Route path='/home' element={<Pokemons pokemons={pokemons} types={types} />}/>
           <Route path='/home/detail/:id' element={<Detail/>}/>
         </Routes>
     </div>

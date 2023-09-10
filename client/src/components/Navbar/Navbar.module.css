@@ -1,14 +1,11 @@
 .selector{
-    width: 150px;
-    height: 40px;
     text-align: center;
     display: inline-block;
     margin: 10px;
     padding: 3px 5px;
     border-radius: 5px;
-    background-color: rgb(187, 191, 191);
-    font-family: rick;
-    font-size: 20px;
+    background-color: rgba(188, 188, 188, 0.942);
+    font-size: 15px;
 }
 
 .label{
@@ -16,14 +13,19 @@
     font-size: x-large;
     text-shadow: -2px 2px black;
     -webkit-text-stroke: 0.7px black;
+    display: block;
 }
 
 .divSelectores{
+    position: fixed;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
     padding: 5px 15px;
-    background-color: rgba(205, 203, 203, 0.569);
-    border: 2px dotted black;
+    background-color: rgba(205, 203, 203, 0.227);
     border-radius: 10px;
+    gap: 20px;
 }
 
 
@@ -42,3 +44,21 @@
     color: red;
 }
 
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.btnForm{
+    cursor: pointer;
+    background-color: aqua;
+    color: black;
+}
+
+.btnForm:hover{
+    background-color: bisque;
+    color: green;
+}
