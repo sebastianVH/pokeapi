@@ -2,8 +2,8 @@ import {useEffect, useState } from "react"
 import { Validations } from "./validations"
 import styles from "./Form.module.css"
 import { useDispatch, useSelector } from "react-redux"
-import { createPokemon, getTypes } from "../../redux/actions"
-import { Link, useNavigate } from "react-router-dom"
+import { createPokemon, getTypes,setPokemons } from "../../redux/actions"
+import { Link, redirect, useNavigate } from "react-router-dom"
 
 
 export default function Form(){
@@ -49,14 +49,14 @@ export default function Form(){
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(errors);
          if (Object.keys(errors).length === 0) {
             try {
                 dispatch(createPokemon(pokemondata));
             } catch (error) {
                 return alert(error.message)
             }
-            alert("Pokemon created succesfully!!") 
+            alert("Pokemon created succesfully!!")
+            dispatch(setPokemons())
             navigate('/home')
         } 
         else {
@@ -76,7 +76,10 @@ export default function Form(){
         setPokemondata({...pokemondata, types:[...pokemondata.types]});
     }
 
-    
+    const handleCancel = () => {
+        navigate('/home')
+    }
+
         return  <div className={styles.containerForm}>
                     <form onSubmit={handleSubmit} className={styles.form}>
                         <h4 className={styles.loginBanner}>Create  your own Pokemon</h4>
@@ -146,10 +149,8 @@ export default function Form(){
                             </div>
                         </div>
                         <div className={styles.row}>
-                            <button className={styles.btnSubmit} type="submit">Create!</button>
-                            <Link to="/home">
-                            <button className={styles.btnCancel} type="button">Cancel</button>
-                            </Link>
+                            <button className={styles.btnSubmit} type="submit">Create!</button>           
+                            <button onClick={handleCancel} className={styles.btnCancel} type="button">Cancel</button>
                         </div>
                     </form>
                 </div>

@@ -13,7 +13,7 @@ const reducer = (state = initialState,action) => {
         case SET_POKEMONS:
             return {...state, apiPokemons: [...action.payload.api], dataBasePokemons: [...action.payload.database], allPokemons: [...action.payload.api, ...action.payload.database] ,myPokemons: [...action.payload.api, ...action.payload.database]}
         case ADD_POKEMON:
-            return {...state, apiPokemons: [...state.apiPokemons,action.payload], allPokemons: [...state.allPokemons,action.payload]}
+            return {...state, apiPokemons: [...state.apiPokemons,action.payload], allPokemons: [...state.allPokemons,action.payload], myPokemons: [...state.myPokemons, ...action.payload]}
         case GET_TYPES:
             return {...state, allTypes: action.payload}
         case ORDER_BY_NAME:

@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import myStyle from "../Navbar/Navbar.module.css"
-import { getTypes,orderByName,orderByAttack,filterByType,filterByOrigin } from "../../redux/actions"
-import { useDispatch, useSelector } from "react-redux"
+import { orderByName,orderByAttack,filterByType,filterByOrigin } from "../../redux/actions"
+import { useDispatch } from "react-redux"
 
 
 export default function Navbar({types}){

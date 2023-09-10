@@ -1,7 +1,6 @@
 import './App.css';
-import { Routes,Route, useNavigate, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { Routes,Route,useLocation } from 'react-router-dom';
+import { useEffect} from 'react';
 import Login from './components/Login/Login';
 import Pokemons from './components/PokemonsList/Pokemons';
 import Detail from './components/Detail/Detail';
