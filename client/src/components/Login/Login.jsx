@@ -1,14 +1,20 @@
 import styles from "./Login.module.css"
-import pokeball from "../../assets/img/pngwing.com.png"
 import { Link } from "react-router-dom"
 
+
+
 export default function Login () {
-    return <div className={styles.container}>
-                <Link className={styles.Login} to='/home'>
-                    <img className={styles.pokeball} src={pokeball} alt="" />
-                    <div className={styles.textEntrar}>
-                        <span>Entrar</span>
+
+    return <div>
+                <div className={styles.containerPrincipal}>
+                    <h1 className={styles.title}>PokeAPI for Henry</h1>
+                </div>
+                    <div className={styles.container}>
+                        <Link className={styles.Login} to='/home'>
+                                <p className={styles.textEntrar}>Enter</p>
+                            {/* <div className={styles.textEntrar}>
+                            </div> */}
+                        </Link>
                     </div>
-                </Link>
             </div>
 }

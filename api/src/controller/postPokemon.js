@@ -3,6 +3,7 @@ const { Pokemon,Type } = require("../db")
 
 const postPokemon = async (req,res) => {
     const {name,image,hp,attack,defense,speed,height,weight,types} = req.body
+    if(!name || !image || !hp || !attack || !defense || !types) return res.status(400).json({error: "Missing Data to Create a Pokemon"})
     try {
         const createdPokemon = await Pokemon.create({
             name:name.toLowerCase(),
@@ -10,9 +11,9 @@ const postPokemon = async (req,res) => {
             hp:hp,
             attack:attack,
             defense:defense,
-            speed:speed,
-            height: height,
-            weight: weight
+            speed:speed || 0,
+            height: height || 0,
+            weight: weight || 0
         })
 
         await types.forEach (async type =>{

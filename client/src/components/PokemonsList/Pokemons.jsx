@@ -1,20 +1,16 @@
 import { useEffect, useState } from "react"
-import { useDispatch, useSelector} from "react-redux"
 import Card from "../Card/Card"
 import styles from "./Pokemons.module.css"
-import { setPokemons } from "../../redux/actions"
+import Navbar from "../Navbar/Navbar"
 
 
-export default function Pokemons(){
+export default function Pokemons({pokemons,types}){
 
-    const pokemons  = useSelector((state)=>state.allPokemons)
-    //const pokemons = useSelector(state => [...state.apiPokemons,...state.dataBasePokemons])
     const [page,setPage] = useState(0)
     const [pageSize,setPageSize] = useState(12)
     const [displayPokemons, setDisplayPokemons] = useState([])
 
     
-
     useEffect(()=>{
         const pokemonsToDisplay = pokemons.slice(page,pageSize)
         setDisplayPokemons(pokemonsToDisplay)
@@ -38,7 +34,10 @@ export default function Pokemons(){
         }
     }
 
-    return <div>
+    return <div className={styles.elementContainer}>
+                <div>
+                      <Navbar types={types} />
+                </div>
                 <div>
                     <div className={styles.cardContainer}>
                         {displayPokemons.map( (pokemon) =>{

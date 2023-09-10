@@ -20,3 +20,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "pokeFont";
+  src: url(../src/assets/PocketMonk-15ze.ttf);
+}
