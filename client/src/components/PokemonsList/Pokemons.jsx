@@ -35,8 +35,8 @@ export default function Pokemons({pokemons,types}){
     }
 
     return <div className={styles.elementContainer}>
-                <div>
-                      <Navbar types={types} />
+                <div className={styles.navContainer}>
+                    <Navbar types={types} />
                 </div>
                 <div>
                     <div className={styles.cardContainer}>

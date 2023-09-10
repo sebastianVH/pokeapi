@@ -3,6 +3,7 @@ import styles from "./Searchbar.module.css"
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import pikachu from "../../assets/img/pikachu-face.png"
 import pokeball from "../../assets/img/pokeball.png"
 
 
@@ -34,21 +35,23 @@ export default function SearchBar() {
       <div className={styles.container}>
             <Link to={"/home"}>
                <div className={styles.titleBar}>
-                     <img className={styles.pokeball} src={pokeball} alt="" />
+                     <img className={styles.pikachu} src={pikachu} alt="" />
                      <h1 className={styles.title}>PokeApi</h1>
                </div>
             </Link>
          <div>
             <Link to={'/form'}>
-                  <button>Create your own Pokémon</button>
+                  <button className={styles.buttonForm}>Create your own Pokémon</button>
             </Link>
          </div>
          <div className={styles.containerField}>
-            <div>
-               <label className={styles.label} htmlFor="">Search a pokemon</label>
-               <input className={styles.search} onChange={handleChange} type='search' placeholder="Ingrese el nombre..." />
+            <h3 className={styles.tagCapture}>Capture a Pokemon!!</h3>
+            <div className={styles.inputContainer}>
+               <input className={styles.search} onChange={handleChange} type='search' placeholder="search by name..." />
+               <button className={styles.btnAgregar} onClick={() => {search();clearInput()}}>
+                  <img src={pokeball} className={styles.pokeball} alt="" />
+               </button>
             </div>
-            <button className={styles.btnAgregar} onClick={() => {search();clearInput()}}>Buscar</button>
          </div>
       </div>
    );

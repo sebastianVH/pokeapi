@@ -1,11 +1,9 @@
-.selector{
+.selector {
     text-align: center;
-    display: inline-block;
-    margin: 10px;
-    padding: 3px 5px;
     border-radius: 5px;
     background-color: rgba(188, 188, 188, 0.942);
     font-size: 15px;
+    width: 15vh;
 }
 
 .label{
@@ -17,13 +15,15 @@
 }
 
 .divSelectores{
+    margin-top:25px;
+    border: 3px solid rgb(255, 221, 0);
+    background-color: rgba(143, 143, 141, 0.51);
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
     padding: 5px 15px;
-    background-color: rgba(205, 203, 203, 0.227);
     border-radius: 10px;
     gap: 20px;
 }
@@ -46,10 +46,10 @@
 
 .options{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-    align-content: flex-start;
+    align-content: center;
 }
 
 .btnForm{

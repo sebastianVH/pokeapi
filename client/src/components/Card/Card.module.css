@@ -1,5 +1,4 @@
 .cardContainer{
-    margin-top: 25px;
     font-size: 20px;
     border: 2px solid rgb(129, 129, 129);
     border-radius: 15px;
@@ -8,6 +7,9 @@
     background-size: 200% 200%;
     height: 300px;
     width: 280px;
+    box-shadow: 4px 4px 23px -1px rgba(255,255,255,0.61);
+    -webkit-box-shadow: 4px 4px 23px -1px rgba(255,255,255,0.61);
+    -moz-box-shadow: 4px 4px 23px -1px rgba(255,255,255,0.61);
 }
 
 .cardContainer:hover{
@@ -45,3 +47,4 @@ a{
     aspect-ratio: 1/1;
     height: 30px;
 }
+

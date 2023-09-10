@@ -5,7 +5,6 @@ import axios from 'axios';
 import Login from './components/Login/Login';
 import Pokemons from './components/PokemonsList/Pokemons';
 import Detail from './components/Detail/Detail';
-import Navbar from './components/Navbar/Navbar';
 import { useDispatch,useSelector } from 'react-redux';
 import { setPokemons,getTypes } from './redux/actions';
 import Form from './components/Form/Form';
@@ -13,16 +12,14 @@ import SearchBar from './components/SearchBar/Searchbar';
 
 function App() {
 
-  
   const {pathname} = useLocation()
   const dispatch = useDispatch()
-  const pokemons = useSelector(state => state.allPokemons)
+  const pokemons = useSelector(state => state.myPokemons) //cambie de state.allPokemons
   const types = useSelector( state => state.allTypes)
 
-
   useEffect(()=>{
-    dispatch(setPokemons())
     dispatch(getTypes())
+    dispatch(setPokemons())
     },[])
 
   return (

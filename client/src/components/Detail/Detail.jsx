@@ -19,7 +19,7 @@ export default function Detail(){
 
     return(
         <div className={styles.itemsContainer}>
-            <div className={styles.cardStyle}>
+            <div className={styles.cardStyle} transition-style="in:square:center">
                 <div>
                     <div className={styles.header}>
                         <h3 className={styles.textStyle}>ID: {detail.id}</h3>
