@@ -1,27 +1,25 @@
 
-/* .cardContainer{
-    display: flex;
+.navContainer{
+    display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-} */
-
+} 
 
 .cardContainer{
+    margin-top: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px,350px));
+    grid-template-columns: repeat(auto-fill,minmax(200px,300px));
     justify-content: center;
     justify-items: center;
     gap: 1vw;
 } 
 
-
-
 .buttons{
+    color: black;
     cursor: pointer;
     margin:15px;
     padding: 2px 15px;
-    background-color: rgb(217, 255, 0);
+    background-color: rgb(255, 225, 0);
     border: 1px solid rgb(255, 255, 255);
     border-radius: 2px;
 }
