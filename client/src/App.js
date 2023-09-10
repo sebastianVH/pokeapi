@@ -13,7 +13,7 @@ function App() {
 
   const {pathname} = useLocation()
   const dispatch = useDispatch()
-  const pokemons = useSelector(state => state.myPokemons) //cambie de state.allPokemons
+  const pokemons = useSelector(state => state.myPokemons)
   const types = useSelector( state => state.allTypes)
 
   useEffect(()=>{

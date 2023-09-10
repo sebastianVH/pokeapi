@@ -44,12 +44,6 @@ export default function Detail(){
                                 const image = require (`../../assets/img/img-types/${type.name}.png`) 
                                 return <img className={styles.detailIcon} src={image} alt={type.name} title={type.name} />
                                 })}</h4>
-                        {/* <div className={styles.typesContainer}>
-                                {detail.types?.map(type =>{
-                                const image = require (`../../assets/img/img-types/${type.name}.png`) 
-                                return <img className={styles.detailIcon} src={image} alt={type.name} title={type.name} />
-                                })}
-                            </div> */}
                 </div>
             </div>
                 <Link to={"/home"}>

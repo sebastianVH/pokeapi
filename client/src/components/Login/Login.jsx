@@ -12,8 +12,6 @@ export default function Login () {
                     <div className={styles.container}>
                         <Link className={styles.Login} to='/home'>
                                 <p className={styles.textEntrar}>Enter</p>
-                            {/* <div className={styles.textEntrar}>
-                            </div> */}
                         </Link>
                     </div>
             </div>
