@@ -9,7 +9,6 @@ export default function Navbar({types}){
     const dispatch = useDispatch()
 
     useEffect(()=>{
-        //dispatch(getTypes())
     },[])
 
     const handleOrderByName = (e) => {
