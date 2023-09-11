@@ -20,3 +20,4 @@ describe('Pokemon model', () => {
     });
   });
 });
+
