@@ -10,7 +10,6 @@ export default function Pokemons({pokemons,types}){
     const [pageSize,setPageSize] = useState(12)
     const [displayPokemons, setDisplayPokemons] = useState([])
 
-    
     useEffect(()=>{
         const pokemonsToDisplay = pokemons.slice(page,pageSize)
         setDisplayPokemons(pokemonsToDisplay)
@@ -40,8 +39,8 @@ export default function Pokemons({pokemons,types}){
                 </div>
                 <div>
                     <div className={styles.cardContainer}>
-                        {displayPokemons.map( (pokemon) =>{
-                            return <Card key={pokemon.id} data={pokemon}/>
+                        {displayPokemons.map( (pokemon,index) =>{
+                            return <Card key={index} data={pokemon}/>
                         })}
                     </div>
                     {page >= 1 && <button className={styles.buttons} onClick={()=>handlePage("prev")} > Previous Page</button>}

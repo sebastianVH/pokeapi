@@ -9,10 +9,10 @@ export default function Login () {
                 <div className={styles.containerPrincipal}>
                     <h1 className={styles.title}>PokeAPI for Henry</h1>
                 </div>
-                    <div className={styles.container}>
-                        <Link className={styles.Login} to='/home'>
-                                <p className={styles.textEntrar}>Enter</p>
-                        </Link>
-                    </div>
+                <div className={styles.container}>
+                    <Link className={styles.Login} to='/home'>
+                            <p className={styles.textEntrar}>Enter</p>
+                    </Link>
+                </div>
             </div>
 }

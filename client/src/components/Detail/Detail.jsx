@@ -14,7 +14,7 @@ export default function Detail(){
         id && axios(`http://localhost:3001/pokemons/${id}`)
         .then(({data}) => {
             return setDetail(data); 
-        })
+        }).catch(error => alert(error.response.data.error))
     },[id])
 
     return(
@@ -40,9 +40,9 @@ export default function Detail(){
                     <h4 className={styles.textStyle}>Speed: {detail.speed || "Does not have" } </h4>
                     <h4 className={styles.textStyle}>Height: {detail.height || "Does Not Have"}</h4>
                     <h4 className={styles.textStyle}>Weight: {detail.weight || "Does Not Have"}</h4>
-                    <h4 className={styles.textStyle}>Types: {detail.types?.map(type =>{
+                    <h4 className={styles.textStyle}>Types: {detail.types?.map((type,index) =>{
                                 const image = require (`../../assets/img/img-types/${type.name}.png`) 
-                                return <img className={styles.detailIcon} src={image} alt={type.name} title={type.name} />
+                                return <img key={index} className={styles.detailIcon} src={image} alt={type.name} title={type.name} />
                                 })}</h4>
                 </div>
             </div>

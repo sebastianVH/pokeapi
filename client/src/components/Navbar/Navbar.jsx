@@ -27,12 +27,11 @@ export default function Navbar({types}){
         dispatch(filterByOrigin(e.target.value))
     }
 
-    return    <div className={myStyle.divSelectores}>
+    return  <div className={myStyle.divSelectores}>
                     <div className={myStyle.options}>
                         <label className={myStyle.label} htmlFor="">Order By Attack</label>
                         <div>
-                            <select className={myStyle.selector} onChange={handleOrderByAttack}>
-                                <option value="">No Order</option>
+                            <select className={myStyle.selector} onClick={handleOrderByAttack}>
                                 <option value="A">Asc</option>
                                 <option value="B">Desc</option>
                             </select>
@@ -41,8 +40,7 @@ export default function Navbar({types}){
                     <div className={myStyle.options}>
                         <label className={myStyle.label} htmlFor="">Order By Name</label>
                         <div>
-                            <select className={myStyle.selector} onChange={handleOrderByName}>
-                                <option value="">No Order</option>
+                            <select className={myStyle.selector} onClick={handleOrderByName}>
                                 <option value="A">Asc</option>
                                 <option value="B">Desc</option>
                             </select>

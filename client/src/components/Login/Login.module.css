@@ -9,21 +9,26 @@
     width: 50vh;
     height: 50vh;
     text-align: center;
+    animation: rotate-pokeball 1.5s infinite;
+    margin-left: 15%;
 }
 
 .pokeball{
-    height: 50vh;
-    animation: rotate-pokeball 1.5s infinite;
+    height: 60vh;
     transform: rotate(15deg);
     padding: 0px 0px;
 }
 
 .textEntrar{
+    font-family: 'pokeFont';
     margin: 0px 0px;
     color: aliceblue;
-    font-size: 15vh;
-    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+    font-size: 10vh;
     text-shadow: 5px 5px 4px black;
+    transform: rotate(-20deg);
+    translate: -10% -120%;
+    -webkit-text-stroke: 3px rgb(2, 2, 171);
+    -webkit-text-fill-color: rgb(250, 242, 0);
 }
 
 @keyframes rotate-pokeball {
@@ -48,7 +53,7 @@
     justify-content: center;
     flex-direction: column;
     text-decoration: none;
-    height: 100%;
+    height: 80vh;
 }
 
 .title{
