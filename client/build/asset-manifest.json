@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f0ede8d.css",
-    "main.js": "/static/js/main.0db89d60.js",
+    "main.css": "/static/css/main.8c53e705.css",
+    "main.js": "/static/js/main.4c5841c0.js",
     "static/js/787.617752d5.chunk.js": "/static/js/787.617752d5.chunk.js",
     "static/media/pngwing.com.png": "/static/media/pngwing.com.f2c3f7922eb2bc882928.png",
-    "static/media/unknown.png": "/static/media/unknown.0b9be57e756b483a86aa.png",
+    "static/media/unknown.png": "/static/media/unknown.0ea9d80dbecf7ac91123.png",
     "static/media/banner-pikachu.png": "/static/media/banner-pikachu.acef27c7fb10f3fe6887.png",
     "static/media/pokeball.png": "/static/media/pokeball.a6208d5c9297be2e2cbb.png",
     "static/media/High_resolution_wallpaper_background_ID_77700561785.webp": "/static/media/High_resolution_wallpaper_background_ID_77700561785.212c727cf52e54cba0e4.webp",
+    "static/media/pikachu-error.jpg": "/static/media/pikachu-error.026ab2a6a2afd59a2c8b.jpg",
     "static/media/pikachu-face.png": "/static/media/pikachu-face.a8987b82452bef957533.png",
     "static/media/ice.png": "/static/media/ice.6fce6c6a2a211655ace0.png",
     "static/media/grass.png": "/static/media/grass.b805f8ad7ada6a91242a.png",
@@ -28,15 +29,16 @@
     "static/media/dark.png": "/static/media/dark.f8ae002d9e2b9d8ac72d.png",
     "static/media/steel.png": "/static/media/steel.6a2ed5578f7cf81df1ad.png",
     "static/media/PocketMonk-15ze.ttf": "/static/media/PocketMonk-15ze.09d09837f1b6dec50403.ttf",
+    "static/media/PokemonGb-RAeo.ttf": "/static/media/PokemonGb-RAeo.6211ee48ea626f34681e.ttf",
     "static/media/none.png": "/static/media/none.0ea9d80dbecf7ac91123.png",
     "static/media/shadow.png": "/static/media/shadow.0ea9d80dbecf7ac91123.png",
     "index.html": "/index.html",
-    "main.9f0ede8d.css.map": "/static/css/main.9f0ede8d.css.map",
-    "main.0db89d60.js.map": "/static/js/main.0db89d60.js.map",
+    "main.8c53e705.css.map": "/static/css/main.8c53e705.css.map",
+    "main.4c5841c0.js.map": "/static/js/main.4c5841c0.js.map",
     "787.617752d5.chunk.js.map": "/static/js/787.617752d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f0ede8d.css",
-    "static/js/main.0db89d60.js"
+    "static/css/main.8c53e705.css",
+    "static/js/main.4c5841c0.js"
   ]
 }
