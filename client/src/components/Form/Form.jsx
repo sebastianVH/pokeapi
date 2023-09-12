@@ -41,7 +41,7 @@ export default function Form(){
 
     useEffect(()=>{
         dispatch(getTypes())
-    },[])
+    },[dispatch])
 
     const closeAlert = () => {
         setAlert(false)
