@@ -1,11 +1,11 @@
 .textStyle{
-    font-size: 30px;
+    font-size: 20px;
     display: inline-flex;
     color: rgb(255, 255, 255);
     word-wrap: break-word;
     overflow-wrap: break-word;
     margin: 0px;
-    font-family: 'pokeFont';
+    font-family: 'fontGameBoy';
     font-weight: 50;
 }
 

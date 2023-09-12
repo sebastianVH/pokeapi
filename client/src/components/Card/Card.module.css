@@ -17,21 +17,29 @@
     background-color: rgba(134, 134, 134, 0.603);
 }
 
-.textDetail{
+.textDetail, .textTypes{
     /* animation: resplandor 4s ease-in-out infinite; */
     color: white;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
     display: block;
     text-transform: capitalize;
 }
 
+.textDetail{
+    font-family: 'pokeFont';
+}
+
+.textTypes {
+font-family: 'fontGameBoy';
+font-size: smaller;
+}
 .imgPokemon{
     height: 160px;
     aspect-ratio: 4/3;
     object-fit: contain;
+    margin-bottom: 5%;
 }
 
 a{

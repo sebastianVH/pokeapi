@@ -3,7 +3,7 @@ import { Validations } from "./validations"
 import styles from "./Form.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { createPokemon, getTypes,setPokemons } from "../../redux/actions"
-import { Link, redirect, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 export default function Form(){

@@ -4,16 +4,20 @@ import { Link, redirect, useNavigate} from "react-router-dom";
 import axios from "axios";
 import pikachu from "../../assets/img/pikachu-face.png"
 import pokeball from "../../assets/img/pokeball.png"
+import { searchValidations } from "./validations";
+
 
 
 export default function SearchBar() {
 
    const [name,setName] = useState("")
+   const [errors,setErrors] = useState()
    const navigate = useNavigate()
-   const regex = /\d/
 
-   const handleChange = (event) => {
-      setName(event.target.value)
+   const handleChange = (e) => {
+      console.log(e.target.value);
+      setErrors(searchValidations(e.target.value))
+      setName(e.target.value)
    } 
    
    const clearInput = () => {
@@ -21,7 +25,7 @@ export default function SearchBar() {
    }
 
    const search = async () =>{
-      if (regex.test(name)) return alert("Search can only contain characters")
+      if (errors) return alert("Please, check the errors.")
       try {
          const {data} = await axios(`http://localhost:3001/pokemons?name=${name}`)
          navigate(`home/detail/${data.id}`)
@@ -55,6 +59,7 @@ export default function SearchBar() {
                   <img src={pokeball} className={styles.pokeball} alt="" />
                </button>
             </div>
+               {errors && <span className={styles.errorText}>{errors}</span>}
          </div>
       </div>
    );

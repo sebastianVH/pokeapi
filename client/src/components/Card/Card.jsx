@@ -24,7 +24,7 @@ export default function Card({data}) {
                             { pokemon.types?.map( type =>{
                                 const image = require (`../../assets/img/img-types/${type.name}.png`) 
                                 return ( <div key={type.id} className={styles.types}> 
-                                            <h3 className={styles.textDetail}> {type.type?.name || type.name}</h3>
+                                            <h3 className={styles.textTypes}> {type.type?.name || type.name}</h3>
                                             <img className={styles.detailIcon} src={image} alt={type.name} title={type.name} />
                                         </div> )
                             })}

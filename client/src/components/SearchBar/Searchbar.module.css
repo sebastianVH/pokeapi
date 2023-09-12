@@ -60,7 +60,7 @@
   .containerField{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .title{
@@ -96,7 +96,7 @@
     height: fit-content;
     font-size: x-large;
     text-align: center;
-    padding: 0 auto;
+    padding: 10px;
   }
 
 .tagCapture{
@@ -104,3 +104,8 @@
   margin: 0px;
 }
 
+.errorText{
+  color: red;
+  font-size: small;
+  margin: 0 auto;
+}
