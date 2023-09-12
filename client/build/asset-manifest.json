@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9f0ede8d.css",
+    "main.js": "/static/js/main.0db89d60.js",
+    "static/js/787.617752d5.chunk.js": "/static/js/787.617752d5.chunk.js",
+    "static/media/pngwing.com.png": "/static/media/pngwing.com.f2c3f7922eb2bc882928.png",
+    "static/media/unknown.png": "/static/media/unknown.0b9be57e756b483a86aa.png",
+    "static/media/banner-pikachu.png": "/static/media/banner-pikachu.acef27c7fb10f3fe6887.png",
+    "static/media/pokeball.png": "/static/media/pokeball.a6208d5c9297be2e2cbb.png",
+    "static/media/High_resolution_wallpaper_background_ID_77700561785.webp": "/static/media/High_resolution_wallpaper_background_ID_77700561785.212c727cf52e54cba0e4.webp",
+    "static/media/pikachu-face.png": "/static/media/pikachu-face.a8987b82452bef957533.png",
+    "static/media/ice.png": "/static/media/ice.6fce6c6a2a211655ace0.png",
+    "static/media/grass.png": "/static/media/grass.b805f8ad7ada6a91242a.png",
+    "static/media/normal.png": "/static/media/normal.e61e80f8ce901ef12cef.png",
+    "static/media/psychic.png": "/static/media/psychic.01da8b549d911889861b.png",
+    "static/media/bug.png": "/static/media/bug.dc065b54e9ab221c79cd.png",
+    "static/media/fairy.png": "/static/media/fairy.60d0c06b1cab8f263263.png",
+    "static/media/poison.png": "/static/media/poison.94a6e1751aa4b6e6cda0.png",
+    "static/media/ghost.png": "/static/media/ghost.994f8bb4157ae67ec7a5.png",
+    "static/media/ground.png": "/static/media/ground.b765119a761ad9fb0d46.png",
+    "static/media/fighting.png": "/static/media/fighting.3def0c8c234d98f7d449.png",
+    "static/media/dragon.png": "/static/media/dragon.382ad2678f23f704e6af.png",
+    "static/media/fire.png": "/static/media/fire.7967ce3db6dd366479b9.png",
+    "static/media/water.png": "/static/media/water.e0f90e507e70b9dec4b8.png",
+    "static/media/rock.png": "/static/media/rock.4b0acdc6055a5dba6d3c.png",
+    "static/media/electric.png": "/static/media/electric.d397b9792f456fc450cb.png",
+    "static/media/flying.png": "/static/media/flying.f42dd849032acdb89215.png",
+    "static/media/dark.png": "/static/media/dark.f8ae002d9e2b9d8ac72d.png",
+    "static/media/steel.png": "/static/media/steel.6a2ed5578f7cf81df1ad.png",
+    "static/media/PocketMonk-15ze.ttf": "/static/media/PocketMonk-15ze.09d09837f1b6dec50403.ttf",
+    "static/media/none.png": "/static/media/none.0ea9d80dbecf7ac91123.png",
+    "static/media/shadow.png": "/static/media/shadow.0ea9d80dbecf7ac91123.png",
+    "index.html": "/index.html",
+    "main.9f0ede8d.css.map": "/static/css/main.9f0ede8d.css.map",
+    "main.0db89d60.js.map": "/static/js/main.0db89d60.js.map",
+    "787.617752d5.chunk.js.map": "/static/js/787.617752d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f0ede8d.css",
+    "static/js/main.0db89d60.js"
+  ]
+}

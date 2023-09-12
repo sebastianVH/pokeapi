@@ -7,6 +7,7 @@ import Navbar from "../Navbar/Navbar"
 export default function Pokemons({pokemons,types}){
 
     const [page,setPage] = useState(0)
+    const [pageNumber,setPageNumber] = useState(0)
     const [pageSize,setPageSize] = useState(12)
     const [displayPokemons, setDisplayPokemons] = useState([])
 
@@ -19,15 +20,17 @@ export default function Pokemons({pokemons,types}){
     const handlePage = (handler) => {
         switch(handler){
         case "next":
-            if (page < Math.ceil(pokemons.length / pageSize)) {
+            if (pageNumber <= Math.ceil(pokemons.length / pageSize)) {
                 setPage(page + 12);
-                setPageSize(pageSize + 11);
+                setPageSize(pageSize + 12);
+                setPageNumber(pageNumber +1)
             }
             break
         case "prev":
-            if (page > 1) {
+            if (pageNumber >= 1) {
                 setPage(page - 12);
-                setPageSize(pageSize - 11)
+                setPageSize(pageSize - 12)
+                setPageNumber(pageNumber -1)
             }
             break
         }
@@ -39,8 +42,8 @@ export default function Pokemons({pokemons,types}){
                 </div>
                 <div>
                     <div className={styles.cardContainer}>
-                        {displayPokemons.map( (pokemon,index) =>{
-                            return <Card key={index} data={pokemon}/>
+                        {displayPokemons.map( pokemon =>{
+                            return <Card key={pokemon?.id} data={pokemon}/>
                         })}
                     </div>
                     {page >= 1 && <button className={styles.buttons} onClick={()=>handlePage("prev")} > Previous Page</button>}

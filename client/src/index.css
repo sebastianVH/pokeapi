@@ -25,3 +25,8 @@ code {
   font-family: "pokeFont";
   src: url(../src/assets/PocketMonk-15ze.ttf);
 }
+
+@font-face {
+  font-family: "fontGameBoy";
+  src: url(../src/assets/PokemonGb-RAeo.ttf);
+}

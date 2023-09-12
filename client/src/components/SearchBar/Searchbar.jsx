@@ -4,16 +4,21 @@ import { Link, redirect, useNavigate} from "react-router-dom";
 import axios from "axios";
 import pikachu from "../../assets/img/pikachu-face.png"
 import pokeball from "../../assets/img/pokeball.png"
+import { searchValidations } from "./validations";
+import Alert from "../Alert/Alert";
+
 
 
 export default function SearchBar() {
 
    const [name,setName] = useState("")
+   const [errors,setErrors] = useState()
+   const [errorAlert, setErrorAlert] = useState(false)
    const navigate = useNavigate()
-   const regex = /\d/
 
-   const handleChange = (event) => {
-      setName(event.target.value)
+   const handleChange = (e) => {
+      setErrors(searchValidations(e.target.value))
+      setName(e.target.value)
    } 
    
    const clearInput = () => {
@@ -21,13 +26,17 @@ export default function SearchBar() {
    }
 
    const search = async () =>{
-      if (regex.test(name)) return alert("Search can only contain characters")
+      if (errors) return setErrorAlert({message: "Please, check the errors."})
       try {
          const {data} = await axios(`http://localhost:3001/pokemons?name=${name}`)
-         navigate(`home/detail/${data.id}`)
+         navigate(`/detail/${data.id}`)
       } catch (error) {
-         alert(error.response.data.error)
+         setErrorAlert({title:"", message: error.response.data.error})
       }
+   }
+
+   const closeAlert = () => {
+      setErrorAlert(false)
    }
 
    const handleForm = () => {
@@ -55,7 +64,9 @@ export default function SearchBar() {
                   <img src={pokeball} className={styles.pokeball} alt="" />
                </button>
             </div>
+               {errors && <span className={styles.errorText}>{errors}</span>}
          </div>
+         {errorAlert && <Alert title={errorAlert.title} message={errorAlert.message} onClose={closeAlert} />}
       </div>
    );
 }

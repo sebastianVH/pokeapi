@@ -19,6 +19,7 @@
     background-color: rgba(191, 191, 191, 0.566);
     border: 5px solid gray;
     border-radius: 30px;
+    padding-bottom: 15px;
 }
 
 label:first-of-type{
@@ -40,7 +41,7 @@ span{
     border-radius: 50px;
 }
 
-button {
+/* button {
     background-color: rgb(160, 0, 0);
     color: rgb(255, 255, 255);
     border-radius: 5px;
@@ -48,7 +49,7 @@ button {
     padding: 4px 35px;
     font-size: large;
     margin-bottom: 15px;
-}
+} */
 
 button:hover{
     cursor: pointer;

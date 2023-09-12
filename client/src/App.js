@@ -8,6 +8,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { setPokemons,getTypes } from './redux/actions';
 import Form from './components/Form/Form';
 import SearchBar from './components/SearchBar/Searchbar';
+import Alert from './components/Alert/Alert';
 
 function App() {
 
@@ -25,10 +26,10 @@ function App() {
     <div className="App">
         {pathname !== "/" && <SearchBar types = {types}/>}
         <Routes>
-          <Route path='/' element={<Login/>}/>
-          <Route path='/form' element={<Form types={types}/> }/>
+          <Route path='/' Component={Login}/>
+          <Route path='/form' Component={Form}/>
           <Route path='/home' element={<Pokemons pokemons={pokemons} types={types} />}/>
-          <Route path='/home/detail/:id' element={<Detail/>}/>
+          <Route path='/detail/:id' Component={Detail}/>
         </Routes>
     </div>
   );

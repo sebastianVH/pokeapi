@@ -17,14 +17,14 @@ export default function Card({data}) {
                 { pokemon && 
                     (
                     <div className={styles.cardContainer}>
-                        <Link style={styles.links} to={`detail/${pokemon.id}`}>
+                        <Link style={styles.links} to={`/detail/${pokemon.id}`}>
                             <h1 key={pokemon.id} className={styles.textDetail}>{pokemon.name}</h1>
                             <img className={styles.imgPokemon} src={pokemon.image || imagen} alt={pokemon.name} />
                         <div className={styles.typesContainer}>
                             { pokemon.types?.map( type =>{
                                 const image = require (`../../assets/img/img-types/${type.name}.png`) 
                                 return ( <div key={type.id} className={styles.types}> 
-                                            <h3 className={styles.textDetail}> {type.type?.name || type.name}</h3>
+                                            <h3 className={styles.textTypes}> {type.type?.name || type.name}</h3>
                                             <img className={styles.detailIcon} src={image} alt={type.name} title={type.name} />
                                         </div> )
                             })}
