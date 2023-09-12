@@ -2,7 +2,6 @@ const  axios = require("axios");
 const { Pokemon,Type } = require("../db");
 const constructPokemon = require("../constructors/createPokemonStats");
 
-
 const getAllPokemons = async () =>{
     try{
         const getApiPokemons = await axios("https://pokeapi.co/api/v2/pokemon") //! COMPLETAR

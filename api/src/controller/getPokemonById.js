@@ -6,7 +6,6 @@ constructPokemon
 
 const getById = async (req,res) => {
     const idP = req.params.idPokemon;
-    console.log(idP);
     try {
         const databasePokemon = await Pokemon.findOne({
             where: {
@@ -22,7 +21,7 @@ const getById = async (req,res) => {
         return res.status(200).json(newPokemon)   
     } catch (error) {
         console.log(error);
-        return res.status(400).json({error:"Error fetching Pokemon"})
+        return res.status(404).json({error:"Error fetching Pokemon"})
     }
 }
 
