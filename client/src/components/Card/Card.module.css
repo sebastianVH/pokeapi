@@ -34,7 +34,9 @@
 .textTypes {
 font-family: 'fontGameBoy';
 font-size: smaller;
+margin-bottom: 10px;
 }
+
 .imgPokemon{
     height: 160px;
     aspect-ratio: 4/3;

@@ -3,19 +3,26 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import styles from './Detail.module.css'
 import unknown from "../../assets/img/unknown.png"
+import Alert from "../Alert/Alert"
 
 
 export default function Detail(){
 
     const {id} = useParams()
     const [detail,setDetail] = useState({})
+    const [errorAlert, setErrorAlert] = useState(false)
 
     useEffect(()=>{
         id && axios(`http://localhost:3001/pokemons/${id}`)
         .then(({data}) => {
             return setDetail(data); 
-        }).catch(error => alert(error.response.data.error))
+        }).catch(error =>
+            setErrorAlert({message: error.response.data.error}))
     },[id])
+
+    const closeAlert = () => {
+        setErrorAlert(false)
+     }
 
     return(
         <div className={styles.itemsContainer}>
@@ -49,6 +56,7 @@ export default function Detail(){
                 <Link to={"/home"}>
                     <button className={styles.button}>Return to Home</button>
                 </Link>
+                {errorAlert && <Alert title={errorAlert.title} message={errorAlert.message} onClose={closeAlert}/>}
         </div>
     )
 }
