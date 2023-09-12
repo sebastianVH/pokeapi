@@ -33,6 +33,8 @@ export default function Pokemons({pokemons,types}){
                 setPageNumber(pageNumber -1)
             }
             break
+        default:
+            break;
         }
     }
 

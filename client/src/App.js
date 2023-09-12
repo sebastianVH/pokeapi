@@ -8,7 +8,6 @@ import { useDispatch,useSelector } from 'react-redux';
 import { setPokemons,getTypes } from './redux/actions';
 import Form from './components/Form/Form';
 import SearchBar from './components/SearchBar/Searchbar';
-import Alert from './components/Alert/Alert';
 
 function App() {
 
@@ -20,7 +19,7 @@ function App() {
   useEffect(()=>{
     dispatch(getTypes())
     dispatch(setPokemons())
-    },[])
+    },[dispatch])
 
   return (
     <div className="App">
