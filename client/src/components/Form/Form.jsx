@@ -4,6 +4,7 @@ import styles from "./Form.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { createPokemon, getTypes,setPokemons } from "../../redux/actions"
 import { useNavigate } from "react-router-dom"
+import Alert from "../Alert/Alert"
 
 
 export default function Form(){
@@ -35,10 +36,20 @@ export default function Form(){
         types:[]
     })
 
+    const [alert,setAlert] = useState(false)
+
     useEffect(()=>{
         dispatch(getTypes())
     },[])
 
+    const closeAlert = () => {
+        setAlert(false)
+    }
+
+    const handleHome = () => {
+        dispatch(setPokemons())
+        navigate('/home')
+    }
 
     const handleChange = (e) =>{
         const property = e.target.name
@@ -49,18 +60,17 @@ export default function Form(){
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-         if (Object.keys(errors).length === 0) {
+        if (Object.keys(errors).length === 0) {
             try {
                 dispatch(createPokemon(pokemondata));
             } catch (error) {
                 return alert(error.message)
             }
-            alert("Pokemon created succesfully!!")
-            dispatch(setPokemons())
-            navigate('/home')
-        } 
+            setAlert({title:"Pokemon created succesfully!!" ,message:"Search your Pokemon on the menu!", onClose: handleHome})
+        }
+
         else {
-            alert("There's some errors found on the form!")
+            setAlert({title:"Errors found!", message:"Please, check your form", onClose:closeAlert})
         }
     }
 
@@ -76,9 +86,6 @@ export default function Form(){
         setPokemondata({...pokemondata, types:[...pokemondata.types]});
     }
 
-    const handleCancel = () => {
-        navigate('/home')
-    }
 
         return  <div className={styles.containerForm}>
                     <form onSubmit={handleSubmit} className={styles.form}>
@@ -150,8 +157,9 @@ export default function Form(){
                         </div>
                         <div className={styles.row}>
                             <button className={styles.btnSubmit} type="submit">Create!</button>           
-                            <button onClick={handleCancel} className={styles.btnCancel} type="button">Cancel</button>
+                            <button onClick={handleHome} className={styles.btnCancel} type="button">Cancel</button>
                         </div>
                     </form>
+                    {alert && <Alert title={alert.title} message={alert.message} onClose={alert.onClose}/>}                
                 </div>
 }

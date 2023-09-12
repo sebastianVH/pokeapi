@@ -17,7 +17,6 @@ export default function SearchBar() {
    const navigate = useNavigate()
 
    const handleChange = (e) => {
-      console.log(e.target.value);
       setErrors(searchValidations(e.target.value))
       setName(e.target.value)
    } 
@@ -30,7 +29,7 @@ export default function SearchBar() {
       if (errors) return setErrorAlert({message: "Please, check the errors."})
       try {
          const {data} = await axios(`http://localhost:3001/pokemons?name=${name}`)
-         navigate(`home/detail/${data.id}`)
+         navigate(`/detail/${data.id}`)
       } catch (error) {
          setErrorAlert({title:"", message: error.response.data.error})
       }

@@ -17,7 +17,7 @@ export default function Card({data}) {
                 { pokemon && 
                     (
                     <div className={styles.cardContainer}>
-                        <Link style={styles.links} to={`detail/${pokemon.id}`}>
+                        <Link style={styles.links} to={`/detail/${pokemon.id}`}>
                             <h1 key={pokemon.id} className={styles.textDetail}>{pokemon.name}</h1>
                             <img className={styles.imgPokemon} src={pokemon.image || imagen} alt={pokemon.name} />
                         <div className={styles.typesContainer}>
