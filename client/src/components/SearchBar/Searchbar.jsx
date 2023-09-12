@@ -8,7 +8,6 @@ import { searchValidations } from "./validations";
 import Alert from "../Alert/Alert";
 
 
-
 export default function SearchBar() {
 
    const [name,setName] = useState("")

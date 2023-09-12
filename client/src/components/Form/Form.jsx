@@ -12,6 +12,7 @@ export default function Form(){
     const types = useSelector(state => state.allTypes)
     const dispatch = useDispatch()
     const navigate = useNavigate()
+
     const [pokemondata,setPokemondata] = useState({
         name:"",
         image:"",
@@ -64,7 +65,7 @@ export default function Form(){
             try {
                 dispatch(createPokemon(pokemondata));
             } catch (error) {
-                return alert(error.message)
+                return setAlert({message: error.response.data.error})
             }
             setAlert({title:"Pokemon created succesfully!!" ,message:"Search your Pokemon on the menu!", onClose: handleHome})
         }
