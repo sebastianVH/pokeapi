@@ -6,7 +6,6 @@ constructPokemon
 
 const getById = async (req,res) => {
     const idP = req.params.idPokemon;
-    console.log(idP);
     try {
         const databasePokemon = await Pokemon.findOne({
             where: {
